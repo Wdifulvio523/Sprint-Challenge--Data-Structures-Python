@@ -1,8 +1,5 @@
 import time
 
-# Original runtime complexity: O(n**2) because we are running a nested loop. 
-# So, as n increases 
-
 start_time = time.time()
 
 f = open('names_1.txt', 'r')
@@ -14,14 +11,20 @@ names_2 = f.read().split("\n")  # List containing 10000 names
 f.close()
 
 duplicates = []
+# ORIGINAL
 # for name_1 in names_1:
 #     for name_2 in names_2:
 #         if name_1 == name_2:
 #             duplicates.append(name_1)
 
-for name_1 in names_1:
-    if name_1 in names_2:
-        duplicates.append(name_1)
+# # solution 1: O(n)
+# for name_1 in names_1:
+#     if name_1 in names_2:
+#         duplicates.append(name_1)
+
+
+# solution 2: O(log n)
+duplicates.append(str(set(names_1).intersection(names_2)))
 
 
 end_time = time.time()

@@ -14,6 +14,8 @@ Add your answers to the questions below.
 6. What is the space complexity of the provided code in `names.py`?
 -- O(n) because the `duplicates` array will increase with the size of the files
 7. What is the runtime complexity of your optimized code in `names.py`?
--- O(n) Linear because the function is now only looping once (<2 seconds)
+
+-- Solution 1: O(n) Linear because the function is now only looping once (<2 seconds)
+-- Solution 2: O(log n) `0.003977775573730469` seconds!!!!!
 8. What is the space complexity of your optimized code in `names.py`?
 -- O(n)
