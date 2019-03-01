@@ -5,7 +5,18 @@ class BinarySearchTree:
     self.right = None
 
   def depth_first_for_each(self, cb):
-    pass
+    # run callback on self
+    cb(self.value)
+    
+    # if there is a left value on self
+    if self.left:
+        # recurse function on left, passing in the callback
+        self.left.depth_first_for_each(cb)
+    # if there is a right value on self
+    if self.right:
+        # recurse function on right, passing in the callback
+        self.right.depth_first_for_each(cb)   
+        
 
   def breadth_first_for_each(self, cb):
     # create a queue starting at self
